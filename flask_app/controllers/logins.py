@@ -62,6 +62,11 @@ def success():
         
     return render_template('success.html')
 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+
 
 
 
